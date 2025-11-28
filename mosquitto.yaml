@@ -24,6 +24,7 @@ spec:
               mountPath: /mosquitto/config
             - name: mosquitto-secret
               mountPath: /mosquitto/secret # this will be created since it doesn't exist by default
+              readOnly: true
       volumes:
         - name: mosquitto-config
           configMap:
